@@ -12,18 +12,7 @@
 		C85C5EC31A6C29C900BE67BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C85C5EC11A6C29C900BE67BE /* Main.storyboard */; };
 		C85C5EC51A6C29C900BE67BE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C85C5EC41A6C29C900BE67BE /* Images.xcassets */; };
 		C85C5EC81A6C29C900BE67BE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C85C5EC61A6C29C900BE67BE /* LaunchScreen.xib */; };
-		C85C5ED41A6C29C900BE67BE /* TestbedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85C5ED31A6C29C900BE67BE /* TestbedTests.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		C85C5ECE1A6C29C900BE67BE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C85C5EB01A6C29C900BE67BE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C85C5EB71A6C29C900BE67BE;
-			remoteInfo = Testbed;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		C85C5EB81A6C29C900BE67BE /* Testbed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Testbed.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -33,20 +22,10 @@
 		C85C5EC21A6C29C900BE67BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C85C5EC41A6C29C900BE67BE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C85C5EC71A6C29C900BE67BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		C85C5ECD1A6C29C900BE67BE /* TestbedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestbedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C85C5ED21A6C29C900BE67BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C85C5ED31A6C29C900BE67BE /* TestbedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestbedTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C85C5EB51A6C29C900BE67BE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C85C5ECA1A6C29C900BE67BE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -60,7 +39,6 @@
 			isa = PBXGroup;
 			children = (
 				C85C5EBA1A6C29C900BE67BE /* Testbed */,
-				C85C5ED01A6C29C900BE67BE /* TestbedTests */,
 				C85C5EB91A6C29C900BE67BE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -69,7 +47,6 @@
 			isa = PBXGroup;
 			children = (
 				C85C5EB81A6C29C900BE67BE /* Testbed.app */,
-				C85C5ECD1A6C29C900BE67BE /* TestbedTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,23 +72,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		C85C5ED01A6C29C900BE67BE /* TestbedTests */ = {
-			isa = PBXGroup;
-			children = (
-				C85C5ED31A6C29C900BE67BE /* TestbedTests.swift */,
-				C85C5ED11A6C29C900BE67BE /* Supporting Files */,
-			);
-			path = TestbedTests;
-			sourceTree = "<group>";
-		};
-		C85C5ED11A6C29C900BE67BE /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				C85C5ED21A6C29C900BE67BE /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,24 +92,6 @@
 			productReference = C85C5EB81A6C29C900BE67BE /* Testbed.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C85C5ECC1A6C29C900BE67BE /* TestbedTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C85C5EDA1A6C29C900BE67BE /* Build configuration list for PBXNativeTarget "TestbedTests" */;
-			buildPhases = (
-				C85C5EC91A6C29C900BE67BE /* Sources */,
-				C85C5ECA1A6C29C900BE67BE /* Frameworks */,
-				C85C5ECB1A6C29C900BE67BE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C85C5ECF1A6C29C900BE67BE /* PBXTargetDependency */,
-			);
-			name = TestbedTests;
-			productName = TestbedTests;
-			productReference = C85C5ECD1A6C29C900BE67BE /* TestbedTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -161,10 +103,6 @@
 				TargetAttributes = {
 					C85C5EB71A6C29C900BE67BE = {
 						CreatedOnToolsVersion = 6.1.1;
-					};
-					C85C5ECC1A6C29C900BE67BE = {
-						CreatedOnToolsVersion = 6.1.1;
-						TestTargetID = C85C5EB71A6C29C900BE67BE;
 					};
 				};
 			};
@@ -182,7 +120,6 @@
 			projectRoot = "";
 			targets = (
 				C85C5EB71A6C29C900BE67BE /* Testbed */,
-				C85C5ECC1A6C29C900BE67BE /* TestbedTests */,
 			);
 		};
 /* End PBXProject section */
@@ -198,13 +135,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C85C5ECB1A6C29C900BE67BE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -217,23 +147,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C85C5EC91A6C29C900BE67BE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C85C5ED41A6C29C900BE67BE /* TestbedTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		C85C5ECF1A6C29C900BE67BE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C85C5EB71A6C29C900BE67BE /* Testbed */;
-			targetProxy = C85C5ECE1A6C29C900BE67BE /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C85C5EC11A6C29C900BE67BE /* Main.storyboard */ = {
@@ -352,40 +266,6 @@
 			};
 			name = Release;
 		};
-		C85C5EDB1A6C29C900BE67BE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = TestbedTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Testbed.app/Testbed";
-			};
-			name = Debug;
-		};
-		C85C5EDC1A6C29C900BE67BE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = TestbedTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Testbed.app/Testbed";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -403,14 +283,6 @@
 			buildConfigurations = (
 				C85C5ED81A6C29C900BE67BE /* Debug */,
 				C85C5ED91A6C29C900BE67BE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		C85C5EDA1A6C29C900BE67BE /* Build configuration list for PBXNativeTarget "TestbedTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C85C5EDB1A6C29C900BE67BE /* Debug */,
-				C85C5EDC1A6C29C900BE67BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
