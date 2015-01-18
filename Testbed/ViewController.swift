@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet var textView: UITextView!
 
     private func test1() {
-        for i in 1...100 {
+        for i in 1...10 {
             message(String(format: "This is line %02d", i))
         }
     }
