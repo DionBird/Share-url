@@ -1,45 +1,55 @@
-//
 //  ViewController.swift
-//  Testbed
-//
-//  Created by Bill Weinman on 2015-01-18.
 //  Copyright (c) 2015 Bill Weinman. All rights reserved.
-//
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
-    let _version = "1.0.0"
-    
-    @IBOutlet var textView: UITextView!
+    let _version = "1.0.1"
 
-    private func test1() {
-        for i in 1...10 {
-            message(String(format: "This is line %02d", i))
-        }
-    }
-    
+    @IBOutlet var status: UILabel!
+    @IBOutlet weak var urlTextField: UITextField!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        initTextView()
-        message("Testbed \(_version)")
-        test1()
+        status("Share URL demo \(_version)")
+        urlTextField.delegate = self
+        urlTextField.becomeFirstResponder()
     }
 
-    // MARK: Testbed message() support
-
-    private func initTextView() {
-        // intermittent scrollview bug workaround
-        textView.scrollEnabled = false
-        textView.scrollEnabled = true
-
-        textView.editable = false
-        textView.font = UIFont(name: "Courier", size: 14.0)
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.shareText(textField)
+        return true
     }
 
-    private func message( m: String ) {
-        textView.text = textView.text + m + "\n"
-        textView.scrollRangeToVisible(NSRange(location: countElements(textView.text) - 1, length: 0))
+    @IBAction func shareText(sender: AnyObject) {
+        // add the URL scheme, if there is none
+        if let urlText = urlTextField.text where urlText.characters.count > 0 {
+            if urlText.rangeOfString("://") == nil {
+                urlTextField.text = "http://" + urlText
+            }
+        } else {
+            status("Empty URL")
+            return
+        }
+        
+        if let url = NSURL(string: urlTextField.text!) {
+            urlTextField.text = url.absoluteString
+            // only accept HTTP or HTTPS URLs
+            if url.scheme != "http" && url.scheme != "https" {
+                status("Invalid URL scheme \(url.scheme)")
+                return
+            }
+            let sharingItems = [url]
+            let applicationActivities = [SafariActivity(), ChromeActivity()]
+            let activityViewController = UIActivityViewController(activityItems: sharingItems, applicationActivities: applicationActivities)
+            self.presentViewController(activityViewController, animated: true, completion: nil)
+        } else {
+            status("Nothing to share")
+        }
+    }
+
+    private func status( m: String ) {
+        status.text = m
     }
 }

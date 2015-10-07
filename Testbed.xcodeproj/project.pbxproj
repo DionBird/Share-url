@@ -12,6 +12,8 @@
 		C85C5EC31A6C29C900BE67BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C85C5EC11A6C29C900BE67BE /* Main.storyboard */; };
 		C85C5EC51A6C29C900BE67BE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C85C5EC41A6C29C900BE67BE /* Images.xcassets */; };
 		C85C5EC81A6C29C900BE67BE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C85C5EC61A6C29C900BE67BE /* LaunchScreen.xib */; };
+		C8B7F2E21BB478C6009C523A /* ChromeActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B7F2E01BB478C6009C523A /* ChromeActivity.swift */; settings = {ASSET_TAGS = (); }; };
+		C8B7F2E31BB478C6009C523A /* SafariActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B7F2E11BB478C6009C523A /* SafariActivity.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		C85C5EC21A6C29C900BE67BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C85C5EC41A6C29C900BE67BE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C85C5EC71A6C29C900BE67BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		C8B7F2E01BB478C6009C523A /* ChromeActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChromeActivity.swift; sourceTree = "<group>"; };
+		C8B7F2E11BB478C6009C523A /* SafariActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafariActivity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				C85C5EC11A6C29C900BE67BE /* Main.storyboard */,
 				C85C5EC41A6C29C900BE67BE /* Images.xcassets */,
 				C85C5EC61A6C29C900BE67BE /* LaunchScreen.xib */,
+				C8B7F2E01BB478C6009C523A /* ChromeActivity.swift */,
+				C8B7F2E11BB478C6009C523A /* SafariActivity.swift */,
 				C85C5EBB1A6C29C900BE67BE /* Supporting Files */,
 			);
 			path = Testbed;
@@ -98,7 +104,9 @@
 		C85C5EB01A6C29C900BE67BE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Bill Weinman";
 				TargetAttributes = {
 					C85C5EB71A6C29C900BE67BE = {
@@ -143,6 +151,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C85C5EC01A6C29C900BE67BE /* ViewController.swift in Sources */,
+				C8B7F2E21BB478C6009C523A /* ChromeActivity.swift in Sources */,
+				C8B7F2E31BB478C6009C523A /* SafariActivity.swift in Sources */,
 				C85C5EBE1A6C29C900BE67BE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -189,6 +199,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -252,6 +263,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Testbed/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.ShareURL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -262,6 +274,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Testbed/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.ShareURL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -285,6 +298,7 @@
 				C85C5ED91A6C29C900BE67BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

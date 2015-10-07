@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,27 +18,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JxP-7n-xMF">
-                                <rect key="frame" x="0.0" y="28" width="600" height="572"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yTd-OF-cds">
+                                <rect key="frame" x="20" y="28" width="560" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="aYe-AM-L27"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="bw.org" borderStyle="roundedRect" placeholder="URL" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="acb-rJ-b4c">
+                                <rect key="frame" x="20" y="57" width="560" height="30"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="URL"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Hq-T6-H1Z">
+                                <rect key="frame" x="263" y="95" width="75" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="Tac-C8-na4"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="kAa-Xk-S6R"/>
+                                </constraints>
+                                <state key="normal" title="Share"/>
+                                <connections>
+                                    <action selector="shareText:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="veM-1U-Cp4"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <animations/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="JxP-7n-xMF" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" symbolic="YES" id="9bY-1D-KB3"/>
-                            <constraint firstAttribute="trailing" secondItem="JxP-7n-xMF" secondAttribute="trailing" id="Dmj-rV-wrx"/>
-                            <constraint firstItem="JxP-7n-xMF" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="jw5-Re-119"/>
-                            <constraint firstItem="JxP-7n-xMF" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="l8z-I3-fdS"/>
+                            <constraint firstItem="acb-rJ-b4c" firstAttribute="top" secondItem="yTd-OF-cds" secondAttribute="bottom" constant="8" id="1ru-SN-VT4"/>
+                            <constraint firstItem="3Hq-T6-H1Z" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="3Jt-qM-al7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3Hq-T6-H1Z" secondAttribute="trailing" constant="242" id="ICa-Qr-GCC"/>
+                            <constraint firstItem="acb-rJ-b4c" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="Svv-kW-91p"/>
+                            <constraint firstItem="3Hq-T6-H1Z" firstAttribute="top" secondItem="acb-rJ-b4c" secondAttribute="bottom" constant="8" id="Ucw-g7-kj4"/>
+                            <constraint firstItem="yTd-OF-cds" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="YvQ-ar-Id6"/>
+                            <constraint firstItem="yTd-OF-cds" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="eUe-pd-L2R"/>
+                            <constraint firstItem="3Hq-T6-H1Z" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="243" id="pfb-qV-2Lc"/>
+                            <constraint firstItem="acb-rJ-b4c" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="phx-mq-sgS"/>
+                            <constraint firstItem="yTd-OF-cds" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="w0Z-re-VcW"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ICa-Qr-GCC"/>
+                                <exclude reference="pfb-qV-2Lc"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
-                        <outlet property="textView" destination="JxP-7n-xMF" id="A4f-h9-O6L"/>
+                        <outlet property="status" destination="yTd-OF-cds" id="0il-iB-tgV"/>
+                        <outlet property="urlTextField" destination="acb-rJ-b4c" id="3hq-NO-TAX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="409" y="659"/>
         </scene>
     </scenes>
 </document>
